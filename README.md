@@ -38,15 +38,25 @@ Factura: id_factura, id_cliente, id_empleado, fecha, valor_total, tipo_servicio 
 Relaciones principales:
 
 Cliente (1) — (N) OrdenServicio
+
 Empleado (1) — (N) OrdenServicio
+
 OrdenServicio (N) — (M) Repuesto, a través de OrdenRepuesto
+
 Repuesto (N) — (1) Proveedor
+
 Cliente (1) — (N) SesionInternet
+
 EstacionCyber (1) — (N) SesionInternet
+
 Cliente (1) — (N) SesionGaming
+
 Consola (1) — (N) SesionGaming
+
 Cliente (1) — (N) Factura
+
 Empleado (1) — (N) Factura
+
 Factura (1) — (1) OrdenServicio / SesionInternet / SesionGaming (según el tipo de servicio facturado)
 
 Necesito que:
