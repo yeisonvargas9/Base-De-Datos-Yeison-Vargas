@@ -1,12 +1,13 @@
 # Base-De-Datos-Yeison-Vargas
 
-
 **PROMPT**
 
 Actúa como un experto en modelado de bases de datos. Tengo el siguiente caso de estudio:
 
+
 *CASO DE ESTUDIO*
- 
+
+
 Negocio: "TechZone" – Centro de Servicios Tecnológicos y Cyber Gaming.
 
 TechZone es un negocio ubicado en Cúcuta que combina tres líneas de servicio:
@@ -19,23 +20,38 @@ El negocio necesita registrar clientes, empleados que atienden, órdenes de serv
 
 Y esta es la estructura de entidades, atributos y relaciones que ya definí:
 
+
 *ESTRUCTURA DEL MODELO ENTIDAD-RELACIÓN* 
+
 
 Entidades y atributos principales:
 
-Cliente: id_cliente, nombre, telefono, correo, documento
-Empleado: id_empleado, nombre, cargo, telefono, fecha_ingreso
-OrdenServicio: id_orden, id_cliente, id_empleado, tipo_equipo, marca_modelo, falla_reportada, diagnostico, estado, fecha_ingreso, fecha_entrega
-Repuesto: id_repuesto, nombre, descripcion, stock, precio_unitario, id_proveedor
-Proveedor: id_proveedor, nombre, telefono, correo
-OrdenRepuesto (tabla intermedia): id_orden, id_repuesto, cantidad
-EstacionCyber: id_estacion, nombre_pc, estado, tarifa_hora
-SesionInternet: id_sesion, id_estacion, id_cliente, hora_inicio, hora_fin, valor_total
-Consola: id_consola, tipo (Xbox/PS5), estado, tarifa_hora
-SesionGaming: id_sesion_gaming, id_consola, id_cliente, juego, hora_inicio, hora_fin, valor_total
-Factura: id_factura, id_cliente, id_empleado, fecha, valor_total, tipo_servicio (repuesto/cyber/gaming)
 
-Relaciones principales:
+**Cliente:** id_cliente, nombre, telefono, correo, documento
+
+**Empleado:** id_empleado, nombre, cargo, telefono, fecha_ingreso
+
+**OrdenServicio:** id_orden, id_cliente, id_empleado, tipo_equipo, marca_modelo, falla_reportada, diagnostico, estado, fecha_ingreso, fecha_entrega
+
+**Repuesto:** id_repuesto, nombre, descripcion, stock, precio_unitario, id_proveedor
+
+**Proveedor:** id_proveedor, nombre, telefono, correo
+
+**OrdenRepuesto (tabla intermedia):** id_orden, id_repuesto, cantidad
+
+**EstacionCyber:** id_estacion, nombre_pc, estado, tarifa_hora
+
+**SesionInternet:** id_sesion, id_estacion, id_cliente, hora_inicio, hora_fin, valor_total
+
+**Consola:** id_consola, tipo (Xbox/PS5), estado, tarifa_hora
+
+**SesionGaming:** id_sesion_gaming, id_consola, id_cliente, juego, hora_inicio, hora_fin, valor_total
+
+**Factura:** id_factura, id_cliente, id_empleado, fecha, valor_total, tipo_servicio (repuesto/cyber/gaming)
+
+
+*Relaciones principales:*
+
 
 Cliente (1) — (N) OrdenServicio
 
